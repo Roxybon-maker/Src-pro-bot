@@ -680,7 +680,7 @@ def format_caption(original_caption, sender, custom_caption):
     replacements = load_replacement_words(sender)
 
     # ✅ Replace all @mentions with your bot's handle
-    original_caption = re.sub(r'@\w+', '@Chosen_Onex', original_caption)
+    original_caption = re.sub(r'@\w+', '𓍯𝙎𝙪𝙟𝙖𝙡⚝', original_caption)
 
     # ✅ Replace all URLs with your custom invite link
     original_caption = re.sub(
@@ -689,9 +689,9 @@ def format_caption(original_caption, sender, custom_caption):
         original_caption
     )
     # ✅ Remove everything after 'Extracted By ...'
-    original_caption = re.sub(r'(Extracted By)[^\n]*', r'\1 @Src_pro_bot', original_caption, flags=re.IGNORECASE)
-    original_caption = re.sub(r'(Downloaded By)[^\n]*', r'\1 @Src_pro_bot', original_caption, flags=re.IGNORECASE)
-    original_caption = re.sub(r'(Downloaded By:)[^\n]*', r'\1 @Src_pro_bot', original_caption, flags=re.IGNORECASE)
+    original_caption = re.sub(r'(Extracted By)[^\n]*', r'\1 𓍯𝙎𝙪𝙟𝙖𝙡⚝', original_caption, flags=re.IGNORECASE)
+    original_caption = re.sub(r'(Downloaded By)[^\n]*', r'\1 𓍯𝙎𝙪𝙟𝙖𝙡⚝', original_caption, flags=re.IGNORECASE)
+    original_caption = re.sub(r'(Downloaded By:)[^\n]*', r'\1 𓍯𝙎𝙪𝙟𝙖𝙡⚝', original_caption, flags=re.IGNORECASE)
 
 
 
@@ -869,7 +869,7 @@ async def callback_query_handler(event):
             [Button.inline(f"Pyrogram v2{pyrogram_check}", b'pyrogram')],
             [Button.inline(f"II_LevelUP_II v1 ⚡{telethon_check}", b'telethon')]
         ]
-        await event.edit("Choose your preferred upload method:\n\n__**Note:** **II_LevelUP_II ⚡**, built on Telethon(base), by @II_LevelUP_II still in beta.__", buttons=buttons)
+        await event.edit("Choose your preferred upload method:\n\n__**Note:** **𓍯𝙎𝙪𝙟𝙖𝙡⚝**, built on Telethon(base), by @studywithsv still in beta.__", buttons=buttons)
 
     elif event.data == b'pyrogram':
         save_user_upload_method(user_id, "Pyrogram")
@@ -877,7 +877,7 @@ async def callback_query_handler(event):
 
     elif event.data == b'telethon':
         save_user_upload_method(user_id, "Telethon")
-        await event.edit("Upload method set to **II_LevelUP_II ⚡\n\nThanks for choosing this library as it will help me to analyze the error raise issues on github.** ✅")        
+        await event.edit("Upload method set to **𓍯𝙎𝙪𝙟𝙖𝙡⚝\n\nThanks for choosing this library as it will help me to analyze the error raise issues on github.** ✅")        
         
     elif event.data == b'reset':
         try:
@@ -1078,7 +1078,7 @@ async def handle_large_file(file, sender, edit, caption):
         if freecheck == 1:
             reply_markup = InlineKeyboardMarkup(
                 [
-                    [InlineKeyboardButton("💎 Get Premium to Forward", url="https://t.me/GeniusJunctionX")]
+                    [InlineKeyboardButton("💎 Get Premium to Forward", url="https://t.me/studywithsv")]
                 ]
             )
             await app.copy_message(
@@ -1186,7 +1186,7 @@ async def rename_file(file, sender, caption=None):
     base_name = os.path.basename(base_name)
 
     # Apply text transformations
-    base_name = re.sub(r'@\w+', '@Chosen_Onex', base_name)  # Replace mentions
+    base_name = re.sub(r'@\w+', '𓍯𝙎𝙪𝙟𝙖𝙡⚝', base_name)  # Replace mentions
     for word in delete_words:
         base_name = base_name.replace(word, "")  # Remove banned words
     for word, replace_word in replacements.items():
@@ -1252,7 +1252,7 @@ def progress_callback(done, total, user_id):
     # Format the final output as needed
     final = (
         f"╭──────────────────╮\n"
-        f"│     **__II_LevelUP_II ⚡ Uploader__**       \n"
+        f"│     **𓍯𝙎𝙪𝙟𝙖𝙡⚝ Uploader__**       \n"
         f"├──────────\n"
         f"│ {progress_bar}\n\n"
         f"│ **__Progress:__** {percent:.2f}%\n"
@@ -1315,7 +1315,7 @@ def dl_progress_callback(done, total, user_id):
     # Format the final output as needed
     final = (
         f"╭──────────────────╮\n"
-        f"│     **__II_LevelUP_II ⚡ Downloader__**       \n"
+        f"│     ** 𓍯𝙎𝙪𝙟𝙖𝙡⚝ Downloader__**       \n"
         f"├──────────\n"
         f"│ {progress_bar}\n\n"
         f"│ **__Progress:__** {percent:.2f}%\n"
