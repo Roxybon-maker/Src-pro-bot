@@ -325,7 +325,7 @@ async def get_msg(userbot, sender, edit_id, msg_link, i, message):
             if chat in saved_channel_ids:
                 await app.edit_message_text(
                     message.chat.id, edit_id,
-                    "This channel is protected by **__CHOSEN ONE ⚝__💀**.\Kya Be... Humare Bot Se Humara Hi Content Nikalega 🌝 Kahi Or Try Kar 😘"
+                    "This channel is protected by **__𓍯𝙎𝙪𝙟𝙖𝙡⚝__**.\Kya Be... Humare Bot Se Humara Hi Content Nikalega 🌝 Kahi Or Try Kar 😘"
                 )
                 return
             
@@ -464,14 +464,14 @@ async def handle_sticker(app, msg, target_chat_id, topic_id, edit_id, log_group)
 
 async def get_media_filename(msg):
     if msg.document:
-        return msg.document.file_name or "Document_By_@Src_pro_bot.txt"
+        return msg.document.file_name or "Document_By_𓍯𝙎𝙪𝙟𝙖𝙡⚝.txt"
     if msg.video:
-        return msg.video.file_name or "Video_By_@Src_pro_bot.mp4"
+        return msg.video.file_name or "Video_By_𓍯𝙎𝙪𝙟𝙖𝙡⚝.mp4"
     if msg.audio:
-        return msg.audio.file_name or "Audio_By_@Src_pro_bot.mp3"
+        return msg.audio.file_name or "Audio_By_𓍯𝙎𝙪𝙟𝙖𝙡⚝.mp3"
     if msg.photo:
-        return "Image_By_@Src_pro_bot.jpg"
-    return "File_By_@Src_pro_bot.dat"
+        return "Image_By_𓍯𝙎𝙪𝙟𝙖𝙡⚝.jpg"
+    return "File_By_𓍯𝙎𝙪𝙟𝙖𝙡⚝.dat"
 
 
 
@@ -495,10 +495,10 @@ async def get_final_caption(msg, sender):
     final_caption = f"{original_caption}\n\n{custom_caption}" if custom_caption else original_caption
 
     # Replace @mentions with @Real_Pirates
-    final_caption = re.sub(r'@\w+', '@II_LevelUP_II', final_caption)
+    final_caption = re.sub(r'@\w+', '𓍯𝙎𝙪𝙟𝙖𝙡⚝', final_caption)
 
     # Replace all links with your channel link
-    final_caption = re.sub(r'https?://\S+|www\.\S+', 'https://t.me/II_Way_to_Success_II', final_caption)
+    final_caption = re.sub(r'https?://\S+|www\.\S+', 'https://t.me/studywithsv', final_caption)
 
     # Perform additional replacements from user-defined rules
     replacements = load_replacement_words(sender)
@@ -640,7 +640,7 @@ async def send_media_message(app, target_chat_id, msg, caption, topic_id):
         elif caption:
             caption = "\n".join([f"> {line}" for line in caption.strip().splitlines()])
         else:
-            caption = ">II_LevelUP_II"
+            caption = ">𓍯𝙎𝙪𝙟𝙖𝙡⚝"
 
         # Send the message with the right method
         if msg.video:
@@ -685,7 +685,7 @@ def format_caption(original_caption, sender, custom_caption):
     # ✅ Replace all URLs with your custom invite link
     original_caption = re.sub(
         r'https?://t\.me/[^\s]+|https?://telegram\.me/[^\s]+',
-        'https://t.me/+7R-7p7jVoz9mM2M1',
+        'https://t.me/studywithsv',
         original_caption
     )
     # ✅ Remove everything after 'Extracted By ...'
@@ -1260,7 +1260,7 @@ def progress_callback(done, total, user_id):
         f"│ **__Speed:__** {speed_mbps:.2f} Mbps\n"
         f"│ **__ETA:__** {remaining_time_min:.2f} min\n"
         f"╰──────────────────╯\n\n"
-        f"**__Pwrd by CHOSEN ONE ⚝__**"
+        f"**__Pwrd by 𓍯𝙎𝙪𝙟𝙖𝙡⚝__**"
     )
     
     # Update tracking variables for the user
@@ -1323,7 +1323,7 @@ def dl_progress_callback(done, total, user_id):
         f"│ **__Speed:__** {speed_mbps:.2f} Mbps\n"
         f"│ **__ETA:__** {remaining_time_min:.2f} min\n"
         f"╰──────────────────╯\n\n"
-        f"**__Pwrd by CHOSEN ONE ⚝__**"
+        f"**__Pwrd by 𓍯𝙎𝙪𝙟𝙖𝙡⚝__**"
     )
     
     # Update tracking variables for the user
