@@ -764,7 +764,7 @@ user_caption_preferences = {}
 async def set_rename_command(user_id, custom_rename_tag):
     user_rename_preferences[str(user_id)] = custom_rename_tag
 
-get_user_rename_preference = lambda user_id: user_rename_preferences.get(str(user_id), '⛥ @II_LevelUp_II')
+get_user_rename_preference = lambda user_id: user_rename_preferences.get(str(user_id), '𓍯𝙎𝙪𝙟𝙖𝙡⚝')
 
 async def set_caption_command(user_id, custom_caption):
     user_caption_preferences[str(user_id)] = custom_caption
@@ -867,7 +867,7 @@ async def callback_query_handler(event):
         # Display the buttons for selecting the upload method
         buttons = [
             [Button.inline(f"Pyrogram v2{pyrogram_check}", b'pyrogram')],
-            [Button.inline(f"II_LevelUP_II v1 ⚡{telethon_check}", b'telethon')]
+            [Button.inline(f"𓍯𝙎𝙪𝙟𝙖𝙡⚝ v1 ⚡{telethon_check}", b'telethon')]
         ]
         await event.edit("Choose your preferred upload method:\n\n__**Note:** **𓍯𝙎𝙪𝙟𝙖𝙡⚝**, built on Telethon(base), by @studywithsv still in beta.__", buttons=buttons)
 
